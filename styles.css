@@ -274,7 +274,7 @@ body {
 .cards {
   display: flex;
   justify-content: center;
-  gap: 1.0rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
@@ -302,6 +302,23 @@ body {
 .card:hover {
   transform: translateY(-8px) scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+/* 🔥 Responsividade para manter na horizontal no mobile */
+@media (max-width: 768px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: start;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .card {
+    flex: 0 0 auto;
+    width: 160px;
+  }
 }
 
 .beneficios {
