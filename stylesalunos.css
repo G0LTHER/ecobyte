@@ -1,311 +1,176 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* stylesalunos.css (Completo e Atualizado) */
+
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* ================================================ */
+/* PARTE 1: VARIÁVEIS E ESTILOS GERAIS              */
+/* ================================================ */
+
+:root {
+    --color-primary-green: #4CAF50;
+    --color-dark-green: #388E3C;
+    --color-light-green: #E8F5E9;
+    --color-accent-green: #A5D6A7;
+    --color-text-dark: #263238;
+    --color-text-medium: #546E7A;
+    --color-background-light: #F9FBE7;
+    --color-white: #FFFFFF;
+    --color-black: #212121;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 6px 24px rgba(0, 0, 0, 0.09);
+    --shadow-strong: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --border-radius-sm: 8px;
+    --border-radius-md: 16px;
+    --border-radius-lg: 24px;
+    --transition-speed: 0.3s ease;
 }
 
+body.dark-theme {
+    --color-primary-green: #66BB6A;
+    --color-dark-green: #4CAF50;
+    --color-light-green: #2C3A41;
+    --color-accent-green: #5A875C;
+    --color-text-dark: #ECEFF1;
+    --color-text-medium: #CFD8DC;
+    --color-background-light: #1E272C;
+    --color-white: #283339;
+    --color-black: #B0BEC5;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-medium: 0 6px 24px rgba(0, 0, 0, 0.25);
+    --shadow-strong: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-  font-family: Arial, sans-serif;
-  background-color: white;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  box-sizing: border-box;
-  color: #000;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
-  transition: transform 0.2s ease;
-  cursor: pointer;
-}
-
-.logo span {
-  color: green;
-}
-
-.logo:hover {
-  transform: scale(1.05);
-}
-
-.nav {
-  display: flex;
-  gap: 20px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
-
-.nav a:hover {
-  color: green;
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 40px;
-  flex-wrap: wrap;
-}
-
-.hero-text {
-  flex: 1 1 400px;
-  max-width: 600px;
-}
-
-.hero-text h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.hero-text h1 span {
-  color: green;
-  font-weight: bold;
-}
-
-.hero-text p {
-  font-size: 16px;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-.cta-button {
-  background-color: black;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 24px;
-  font-size: 16px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.cta-button:hover {
-  background-color: #333;
-}
-
-.hero-image {
-  flex: 1 1 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .hero-text {
-    margin-bottom: 30px;
-  }
-
-  .nav {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-end;
-  }
-}
-
-.nav button {
-  background-color: #ccffd9; /* verde claro */
-  color: black;
-  border: none;
-  padding: 14px 24px;
-  border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  cursor: pointer;
-  font-family: 'Segoe UI', sans-serif; /* Ou outra fonte que preferir */
-  font-weight: 500;
-}
-
-.nav button:hover {
-  background-color: #b3ffc9;
-  transform: translateY(-2px);
-}
-/* Alunos Participantes */
-h1 {
-  text-align: center;
-}
-
-.alunos-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  padding: 4rem 2rem;
-  background-color: #f4fff6;
-}
-
-
-.aluno {
-  background-color: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  text-align: center;
-  width: 180px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.aluno img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-.aluno p {
-  font-weight: 600;
-  color: #007500;
-  font-size: 1rem;
-}
-
-.aluno:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-.sobre-alunos {
-  max-width: 900px;
-  margin: 4rem auto 2rem auto;
-  padding: 0 2rem;
-  font-family: Arial, sans-serif;
-  line-height: 1.7;
-  color: #222;
-}
-
-.sobre-alunos p {
-  font-size: 1.05rem;
-  margin-bottom: 1.5rem;
-  text-align: justify;
-}
-
-.sobre-alunos h2 {
-  color: #005c2e;
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-}
-
-/* Responsivo para Alunos */
-@media (max-width: 768px) {
-  .aluno {
-    width: 140px;
-  }
-
-.aluno p {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-.aluno span {
-  display: block;
-  margin-bottom: 0.5rem;
-}
-}
-.insta-icon {
-  width: 3px;
-  height: 3px;
-  margin-right: 3px;
-  vertical-align: middle;
-}
-.instagram-link svg {
-  transition: fill 0.3s ease;
-}
-
-.instagram-link:hover svg {
-  fill: #000000; /* Verde mais claro no hover */
-}
-
-.aluno a {
-  color: #007500;
-  text-decoration: none;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  margin-top: 0.3rem;
-}
-
-.aluno a:hover {
-  color: #005c2e;
-  text-decoration: underline;
-}
-/* Oculta o botão em desktop */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  padding: 20px;
-}
-
-/* Oculta o menu no mobile inicialmente */
-#nav-menu {
-  display: flex;
-  gap: 20px;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  #nav-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 80px; /* abaixo do header */
-    right: 20px;
-    background-color: #ccffd9;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-
-  #nav-menu.active {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark);
+    line-height: 1.7;
+    min-height: 100vh;
     display: flex;
-  }
+    flex-direction: column;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
+/* ================================================ */
+/* PARTE 2: CABEÇALHO E NAVEGAÇÃO (Consistente)     */
+/* ================================================ */
 
-footer {
-    position: fixed;
+.header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background-color: var(--color-white); box-shadow: var(--shadow-light); position: sticky; top: 0; z-index: 1001; border-bottom: 2px solid transparent; transition: background-color var(--transition-speed), border-color var(--transition-speed); }
+body.dark-theme .header { border-bottom-color: var(--color-accent-green); }
+.logo { font-size: 1.8rem; font-weight: 800; color: var(--color-black); text-decoration: none; }
+.logo span { color: var(--color-primary-green); }
+.nav { display: flex; align-items: center; gap: 1.5rem; }
+.nav a { text-decoration: none; color: var(--color-text-dark); font-weight: 500; padding: 0.5rem 0.75rem; border-radius: var(--border-radius-sm); transition: color var(--transition-speed), background-color var(--transition-speed); }
+.nav a:hover { background-color: var(--color-light-green); color: var(--color-dark-green); }
+.theme-toggle-nav-link { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; }
+.theme-toggle-nav-link .fa-sun { display: none; }
+body.dark-theme .theme-toggle-nav-link .fa-sun { display: inline-block; }
+body.dark-theme .theme-toggle-nav-link .fa-moon { display: none; }
+.theme-toggle-nav-link span { display: none; }
+.menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; color: var(--color-primary-green); }
+
+/* ======================================================== */
+/* PARTE 3: CONTEÚDO ESPECÍFICO DA PÁGINA "SOBRE NÓS"      */
+/* ======================================================== */
+
+main { flex: 1; padding: 3rem 5%; }
+.about-page-content { display: flex; flex-direction: column; max-width: 1100px; margin: 0 auto; gap: 3rem; }
+
+/* Estilo de Título Padrão */
+.about-us-main-text h2,
+.integrantes-column h2,
+.featured-post-section h2 {
+    color: var(--color-dark-green);
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.about-us-main-text h2::after,
+.integrantes-column h2::after,
+.featured-post-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333333;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    z-index: 1000;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-primary-green);
+    border-radius: 2px;
+}
+
+.about-us-main-text p { font-size: 1.1rem; text-align: justify; line-height: 1.8; color: var(--color-text-medium); }
+.about-us-main-text p + p { margin-top: 1rem; }
+
+/* SEÇÃO DO INSTAGRAM */
+.instagram-card-wrapper {
+    max-width: 540px; /* Largura padrão do post do Instagram */
+    margin: 2rem auto 0 auto; /* Centraliza e adiciona espaço */
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-medium);
+    padding: 1rem;
+}
+body.dark-theme .instagram-card-wrapper {
+    background-color: var(--color-light-green);
+}
+/* Força o post do insta a se adaptar ao nosso card */
+.instagram-media {
+    border-radius: var(--border-radius-sm) !important;
+}
+
+/* SEÇÃO DOS INTEGRANTES */
+.integrantes-column { background: var(--color-white); padding: 3rem 2rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-light); }
+.alunos-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; padding-top: 2rem; }
+.aluno-card { background-color: var(--color-background-light); border-radius: var(--border-radius-md); box-shadow: var(--shadow-medium); padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; transition: var(--transition-speed); border: 1px solid var(--color-light-green); }
+.aluno-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-strong); }
+.aluno-card img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 4px solid var(--color-white); box-shadow: var(--shadow-light); }
+.aluno-name { font-weight: 600; color: var(--color-text-dark); font-size: 1.1rem; line-height: 1.4; flex-grow: 1; }
+.instagram-link { display: inline-flex; align-items: center; justify-content: center; margin-top: 1rem; color: var(--color-primary-green); font-size: 1.8rem; transition: var(--transition-speed); }
+.instagram-link:hover { transform: scale(1.1); color: var(--color-dark-green); }
+
+/* Dark Theme específico */
+body.dark-theme .integrantes-column { background: var(--color-white); }
+body.dark-theme .aluno-card { background-color: var(--color-background-light); border-color: var(--color-light-green); }
+body.dark-theme .aluno-card img { border-color: var(--color-light-green); }
+
+/* ================================================ */
+/* PARTE 4: RODAPÉ E RESPONSIVIDADE                 */
+/* ================================================ */
+
+footer { margin-top: auto; background-color: var(--color-black); color: var(--color-text-medium); padding: 1.5rem 5%; font-size: 0.9rem; text-align: center; border-top: 3px solid var(--color-primary-green); }
+
+@media (max-width: 992px) {
+    /* --- MENU HAMBÚRGUER --- */
+    .menu-toggle { display: block; }
+    .nav { flex-direction: column; align-items: flex-start; gap: 1rem; position: fixed; top: 0; right: -100%; width: min(80vw, 320px); height: 100%; background-color: var(--color-white); padding: 6rem 2rem 2rem; box-shadow: var(--shadow-strong); z-index: 1000; transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); overflow-y: auto; }
+    .nav.active { right: 0; }
+    .nav a { font-size: 1.2rem; width: 100%; padding: 0.75rem 1rem; }
+    .theme-toggle-nav-link span { display: inline-block; }
+    body.nav-active::after { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 999; backdrop-filter: blur(2px); }
+    /* Layout da página */
+    main { padding: 2rem 5%; }
+}
+
+@media (max-width: 768px) {
+    .alunos-container { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1.5rem; }
+    .integrantes-column { padding: 2rem 1rem; }
+    .aluno-card img { width: 100px; height: 100px; }
+}
+
+@media (max-width: 480px) {
+    .alunos-container { grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .aluno-card { padding: 1rem; }
+    .aluno-card img { width: 80px; height: 80px; }
+    .aluno-name { font-size: 1rem; }
+    .instagram-card-wrapper {
+      padding: 0.5rem; /* Menos padding no celular */
+    }
 }
