@@ -3,112 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EcoByte Project</title>
+  <title>EcoByte Project - Sobre Nós</title>
   <link rel="stylesheet" href="stylesalunos.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <div class="header">
-    <a href="index.html#" class="logo">Eco<span>Byte</span></a>
-   <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-<div class="nav" id="nav-menu">
-     <a href="index.html#conscientizacao"><button>Conscientização</button></a>
-    <a href="index.html#Resultados"><button>Resultados</button></a>
-    <a href="index.html#Pontodecoleta"><button>Pontos de Coleta</button></a>
-    <a href="alunos.html"><button>Alunos Participantes</button></a>
+  <header class="header">
+    <a href="index.html" class="logo">Eco<span>Byte</span></a>
+
+    <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
     </div>
-  </div>
 
-  <!-- Seção nova com a descrição do grupo -->
-  <section class="sobre-alunos">
-     <h2>SOBRE NÓS</h2>
-    <p>
-      Somos um grupo de estudantes do 1º período do curso de Ciência da Computação, unidos pelo interesse comum em 
-      utilizar a tecnologia como ferramenta para gerar impacto positivo no mundo. Acreditamos que a computação pode ir 
-      além do código e se tornar uma aliada poderosa na construção de um futuro mais consciente e responsável.
-    </p>
-    <p>
-      Este site foi desenvolvido como parte de um projeto acadêmico com foco na conscientização sobre o lixo eletrônico 
-      — um problema ambiental crescente que muitas vezes é negligenciado. Nosso objetivo é informar, educar e incentivar 
-      práticas sustentáveis relacionadas ao descarte e à reciclagem correta de dispositivos eletrônicos.
-    </p>
-    <p>
-      Acreditamos que, por meio da informação acessível e de pequenas ações cotidianas, podemos despertar a responsabilidade 
-      coletiva e transformar atitudes. Com isso, esperamos contribuir para a preservação do meio ambiente e promover uma sociedade 
-      mais consciente, justa e sustentável.
-    </p>
+    <nav class="nav" id="nav-menu">
+      <a href="index.html#conscientizacao">Conscientização</a>
+      <a href="index.html#Resultados">Resultados</a>
+      <a href="index.html#Pontodecoleta">Pontos de Coleta</a>
+      <a href="alunos.html">Sobre Nós</a>
+      
+      <a href="#" id="theme-toggle-link" class="theme-toggle-nav-link">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <span>Alternar Tema</span>
+      </a>
+    </nav>
+  </header>
 
-    <h2>Integrantes do grupo</h2>
+  <main>
+    <section class="about-page-content">
+      <div class="about-us-main-text">
+        <h2>SOBRE NÓS</h2>
+        <p>
+          Somos um grupo de estudantes do 1º período do curso de Ciência da Computação, unidos pelo interesse comum em
+          utilizar a tecnologia como ferramenta para gerar impacto positivo no mundo. Acreditamos que a computação pode ir
+          além do código e se tornar uma aliada poderosa na construção de um futuro mais consciente e responsável.
+        </p>
+        <p>
+          Este site foi desenvolvido como parte de um projeto acadêmico com foco na conscientização sobre o lixo eletrônico
+          — um problema ambiental crescente que muitas vezes é negligenciado. Nosso objetivo é informar, educar e incentivar
+          práticas sustentáveis relacionadas ao descarte e à reciclagem correta de dispositivos eletrônicos.
+        </p>
+      </div>
 
-
-  </section>
-
-
-  <!-- Galeria de alunos -->
-<div class="alunos-container">
-  <div class="aluno">
     
-    <p>Ruan Henrique da Luz</p>
-    <a href="https://instagram.com/ruan.h_/" target="_blank" class="instagram-link">
-      <!-- Ícone SVG do Instagram -->
-      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" fill="#007500" viewBox="0 0 32 32">
-<path d="M 11.46875 5 C 7.917969 5 5 7.914063 5 11.46875 L 5 20.53125 C 5 24.082031 7.914063 27 11.46875 27 L 20.53125 27 C 24.082031 27 27 24.085938 27 20.53125 L 27 11.46875 C 27 7.917969 24.085938 5 20.53125 5 Z M 11.46875 7 L 20.53125 7 C 23.003906 7 25 8.996094 25 11.46875 L 25 20.53125 C 25 23.003906 23.003906 25 20.53125 25 L 11.46875 25 C 8.996094 25 7 23.003906 7 20.53125 L 7 11.46875 C 7 8.996094 8.996094 7 11.46875 7 Z M 21.90625 9.1875 C 21.402344 9.1875 21 9.589844 21 10.09375 C 21 10.597656 21.402344 11 21.90625 11 C 22.410156 11 22.8125 10.597656 22.8125 10.09375 C 22.8125 9.589844 22.410156 9.1875 21.90625 9.1875 Z M 16 10 C 12.699219 10 10 12.699219 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 12.699219 19.300781 10 16 10 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z"></path>
-</svg>
-    </a>
-  </div>
+      <div class="integrantes-column">
+        <h2>Integrantes do Grupo</h2>
+        <div class="alunos-container">
+          
+          <div class="aluno-card">
+          
+            <p class="aluno-name">Ruan Henrique da Luz</p>
+            <a href="https://instagram.com/ruan_henrique" target="_blank" class="instagram-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
 
-  <div class="aluno">
-    <p>Matheus Ferreira Novais</p>
-    <a href="https://instagram.com/_matheusnovais01" target="_blank">
-     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" fill="#007500" viewBox="0 0 32 32">
-<path d="M 11.46875 5 C 7.917969 5 5 7.914063 5 11.46875 L 5 20.53125 C 5 24.082031 7.914063 27 11.46875 27 L 20.53125 27 C 24.082031 27 27 24.085938 27 20.53125 L 27 11.46875 C 27 7.917969 24.085938 5 20.53125 5 Z M 11.46875 7 L 20.53125 7 C 23.003906 7 25 8.996094 25 11.46875 L 25 20.53125 C 25 23.003906 23.003906 25 20.53125 25 L 11.46875 25 C 8.996094 25 7 23.003906 7 20.53125 L 7 11.46875 C 7 8.996094 8.996094 7 11.46875 7 Z M 21.90625 9.1875 C 21.402344 9.1875 21 9.589844 21 10.09375 C 21 10.597656 21.402344 11 21.90625 11 C 22.410156 11 22.8125 10.597656 22.8125 10.09375 C 22.8125 9.589844 22.410156 9.1875 21.90625 9.1875 Z M 16 10 C 12.699219 10 10 12.699219 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 12.699219 19.300781 10 16 10 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z"></path>
-</svg>
-    </a>
-  </div>
+          <div class="aluno-card">
+           
+            <p class="aluno-name">Matheus Ferreira Novais</p>
+            <a href="https://instagram.com/_matheusnovais01" target="_blank" class="instagram-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
 
-   <div class="aluno">
-    <p>Breno Silveira de Melo</p>
-    <a href="https://instagram.com/breno_silvm/" target="_blank">
-     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" fill="#007500" viewBox="0 0 32 32">
-<path d="M 11.46875 5 C 7.917969 5 5 7.914063 5 11.46875 L 5 20.53125 C 5 24.082031 7.914063 27 11.46875 27 L 20.53125 27 C 24.082031 27 27 24.085938 27 20.53125 L 27 11.46875 C 27 7.917969 24.085938 5 20.53125 5 Z M 11.46875 7 L 20.53125 7 C 23.003906 7 25 8.996094 25 11.46875 L 25 20.53125 C 25 23.003906 23.003906 25 20.53125 25 L 11.46875 25 C 8.996094 25 7 23.003906 7 20.53125 L 7 11.46875 C 7 8.996094 8.996094 7 11.46875 7 Z M 21.90625 9.1875 C 21.402344 9.1875 21 9.589844 21 10.09375 C 21 10.597656 21.402344 11 21.90625 11 C 22.410156 11 22.8125 10.597656 22.8125 10.09375 C 22.8125 9.589844 22.410156 9.1875 21.90625 9.1875 Z M 16 10 C 12.699219 10 10 12.699219 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 12.699219 19.300781 10 16 10 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z"></path>
-</svg>
-    </a>
-  </div>
+          <div class="aluno-card">
+           
+            <p class="aluno-name">Breno Silveira de Melo</p>
+            <a href="https://instagram.com/breno_silvm/" target="_blank" class="instagram-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
 
-  <div class="aluno">
-    <p>Leandro Henrique Pereira Vieira</p>
-    <a href="https://instagram.com/" target="_blank">
-    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" fill="#007500" viewBox="0 0 32 32">
-<path d="M 11.46875 5 C 7.917969 5 5 7.914063 5 11.46875 L 5 20.53125 C 5 24.082031 7.914063 27 11.46875 27 L 20.53125 27 C 24.082031 27 27 24.085938 27 20.53125 L 27 11.46875 C 27 7.917969 24.085938 5 20.53125 5 Z M 11.46875 7 L 20.53125 7 C 23.003906 7 25 8.996094 25 11.46875 L 25 20.53125 C 25 23.003906 23.003906 25 20.53125 25 L 11.46875 25 C 8.996094 25 7 23.003906 7 20.53125 L 7 11.46875 C 7 8.996094 8.996094 7 11.46875 7 Z M 21.90625 9.1875 C 21.402344 9.1875 21 9.589844 21 10.09375 C 21 10.597656 21.402344 11 21.90625 11 C 22.410156 11 22.8125 10.597656 22.8125 10.09375 C 22.8125 9.589844 22.410156 9.1875 21.90625 9.1875 Z M 16 10 C 12.699219 10 10 12.699219 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 12.699219 19.300781 10 16 10 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z"></path>
-</svg>
-    </a>
-  </div>
+          <div class="aluno-card">
+           
+            <p class="aluno-name">Leandro Henrique Pereira Vieira</p>
+            <a href="https://instagram.com/" target="_blank" class="instagram-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
 
-  <div class="aluno">
-    <p>Andrey Lucas Reis</p>
-    <a href="https://instagram.com/andreylr__" target="_blank">
-   <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" fill="#007500" viewBox="0 0 32 32">
-<path d="M 11.46875 5 C 7.917969 5 5 7.914063 5 11.46875 L 5 20.53125 C 5 24.082031 7.914063 27 11.46875 27 L 20.53125 27 C 24.082031 27 27 24.085938 27 20.53125 L 27 11.46875 C 27 7.917969 24.085938 5 20.53125 5 Z M 11.46875 7 L 20.53125 7 C 23.003906 7 25 8.996094 25 11.46875 L 25 20.53125 C 25 23.003906 23.003906 25 20.53125 25 L 11.46875 25 C 8.996094 25 7 23.003906 7 20.53125 L 7 11.46875 C 7 8.996094 8.996094 7 11.46875 7 Z M 21.90625 9.1875 C 21.402344 9.1875 21 9.589844 21 10.09375 C 21 10.597656 21.402344 11 21.90625 11 C 22.410156 11 22.8125 10.597656 22.8125 10.09375 C 22.8125 9.589844 22.410156 9.1875 21.90625 9.1875 Z M 16 10 C 12.699219 10 10 12.699219 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 12.699219 19.300781 10 16 10 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z"></path>
-</svg>
-    </a>
-  </div>
+          <div class="aluno-card">
+          
+            <p class="aluno-name">Andrey Lucas Reis</p>
+            <a href="https://instagram.com/andreylr__" target="_blank" class="instagram-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
 
-  <div class="aluno">
-    <p>Nikolas Almeida Sena</p>
-    <a href="https://instagram.com/_nikolasy23" target="_blank">
-   <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" fill="#007500" viewBox="0 0 32 32">
-<path d="M 11.46875 5 C 7.917969 5 5 7.914063 5 11.46875 L 5 20.53125 C 5 24.082031 7.914063 27 11.46875 27 L 20.53125 27 C 24.082031 27 27 24.085938 27 20.53125 L 27 11.46875 C 27 7.917969 24.085938 5 20.53125 5 Z M 11.46875 7 L 20.53125 7 C 23.003906 7 25 8.996094 25 11.46875 L 25 20.53125 C 25 23.003906 23.003906 25 20.53125 25 L 11.46875 25 C 8.996094 25 7 23.003906 7 20.53125 L 7 11.46875 C 7 8.996094 8.996094 7 11.46875 7 Z M 21.90625 9.1875 C 21.402344 9.1875 21 9.589844 21 10.09375 C 21 10.597656 21.402344 11 21.90625 11 C 22.410156 11 22.8125 10.597656 22.8125 10.09375 C 22.8125 9.589844 22.410156 9.1875 21.90625 9.1875 Z M 16 10 C 12.699219 10 10 12.699219 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 12.699219 19.300781 10 16 10 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z"></path>
-</svg>
-  </div>
-</div>
+          <div class="aluno-card">
+         
+            <p class="aluno-name">Nikolas Almeida Sena</p>
+            <a href="https://instagram.com/_nikolasy23" target="_blank" class="instagram-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    &copy;2025 Ecobyte • Unifenas • Todos os direitos reservados
-</footer>
-</footer>
-<script>
-  function toggleMenu() {
-    document.getElementById('nav-menu').classList.toggle('active');
-  }
-</script>
+    <p>©2025 Ecobyte • Unifenas • Todos os direitos reservados</p>
+  </footer>
 
+  <script src="scripta.js" defer></script>
 </body>
 </html>
